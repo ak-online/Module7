@@ -2,7 +2,7 @@ def custom_write(file_name, strings):
     file = open(file_name, 'w', encoding='utf-8')
     string_positions = {}
     num_start = 1
-    byte_start = file.seek(0)
+    byte_start = file.tell()
     for i in strings:
         file.write(i+'\n')
         key = (num_start, byte_start)
